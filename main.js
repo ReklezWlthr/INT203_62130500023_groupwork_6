@@ -154,12 +154,16 @@ const app = Vue.createApp({
             this.conPassOn = !this.conPassOn;
         },
         upload(e) {
-            var file = e.target.files[0] || e.dataTransfer.files[0];
-            var reader = new FileReader();
-            reader.onload = (e) => {
-                this.pro = e.target.result;
-            };
-            reader.readAsDataURL(file);
+            var file = e.target.files[0];
+            if (file.type.includes("image")) {
+                var reader = new FileReader();
+                reader.onload = (e) => {
+                    this.pro = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert("This file is not an image file.")
+            }
         }
     }
 })
