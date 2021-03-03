@@ -24,17 +24,17 @@
 </head>
 
 <body class="bg-gray-300" style="font-family: 'Varela Round', sans-serif;">
-    <div id="app" class="container flex justify-center py-10">
+    <div id="app" class="container flex justify-center py-6">
         <div class="p-5 bg-white rounded-xl shadow">
             <div class="w-full">
                 <div class="w-full font-bold text-2xl mb-4 pb-1 border-b-2"> Profile </div>
-                <div class="flex justify-between mb-4"> <img :src="pro"
+                <div class="flex justify-between pb-4 mb-4 border-b-2"> <img :src="pro"
                         class="rounded-full border-4 border-red-200 p-1 w-32 h-32 hover:border-red-400 transition duration-300 object-cover">
                     <div class="relative mt-24 -ml-8">
                         <input @change="upload" type="file" id="myFile" class="inputFile hidden">
-                        <label for="myFile"
+                        <label for="myFile" id="spin"
                             class="h-5 w-5 rounded-full flex flex-wrap justify-center content-center border-gray-600 text-gray-200 cursor-pointer"
-                            style="border-width: 1rem;"><i id="spin" class="fas fa-sync-alt"></i></label>
+                            style="border-width: 1rem;"><i class="fas fa-sync-alt"></i></label>
                     </div>
                     <div class="ml-2">
                         <div class="px-1">
