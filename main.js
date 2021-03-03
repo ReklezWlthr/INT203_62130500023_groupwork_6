@@ -108,6 +108,8 @@ const app = Vue.createApp({
             row: 'flex justify-start w-full gap-x-5 mb-3',
             tb: 'bg-gray-100 py-1 px-2 text-sm rounded-sm focus:outline-none focus:ring focus:ring-red-200 transition duration-100',
             errorClass: 'text-red-600 text-xs',
+            f: "border-red-200 hover:border-red-400",
+            m: "border-blue-200 hover:border-blue-500",
             passOn: true,
             conPassOn: true
         }
@@ -163,6 +165,15 @@ const app = Vue.createApp({
                 reader.readAsDataURL(file);
             } else {
                 alert("This file is not an image file.")
+            }
+        }
+    },
+    computed: {
+        genderSwitch(){
+            if(this.gender=='m'){
+                return this.m;
+            } else if(this.gender=='f') {
+                return this.f;
             }
         }
     }
